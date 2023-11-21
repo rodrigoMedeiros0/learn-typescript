@@ -32,6 +32,6 @@ const direction = Direction.Up;
 
 //Type Assertions - mudar o tipo de uma variavel
 const productName: any = 'Hat';
-
 // let itemID = productName as string - jeito 1 menos usual
 let itemID = <string>productName;
+
