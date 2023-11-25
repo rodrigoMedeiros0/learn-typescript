@@ -1,14 +1,12 @@
 interface Iperson {
     id: number;
-    name: string;
-    age: number;
     sayMyName(): string;
 }
 
 class Person implements Iperson{
   readonly id: number;
   protected name: string; //acessada apenas na sua classe ou subclasse
-  age: number;
+  private age: number;
 
   constructor(id: number, name: string, age: number) {
     this.id = id;
@@ -16,9 +14,16 @@ class Person implements Iperson{
     this.age = age;
   }
 
-  sayMyName() {
+  sayMyName():string {
     return this.name;
   }
 }
 
-const person1 = new Person(1, 'Rodrigo', 29)
+class Employee extends Person {
+  constructor(id: number, name: string, age: number) {
+    super(id, name, age);
+  }
+}
+
+const rodrigo = new Person(1, 'Rodrigo', 29)
+rodrigo.sayMyName;
