@@ -19,6 +19,11 @@ class Person implements Iperson{
   }
 }
 
+class PersonRefact {
+  constructor( readonly id: number, protected name: string, private age: number) {}
+}
+
+
 class Employee extends Person {
   constructor(id: number, name: string, age: number) {
     super(id, name, age);
@@ -27,3 +32,4 @@ class Employee extends Person {
 
 const rodrigo = new Person(1, 'Rodrigo', 29)
 rodrigo.sayMyName;
+
